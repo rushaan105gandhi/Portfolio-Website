@@ -85,8 +85,26 @@
 
       // Add event listeners to squares
       // Add event listeners to squares
-const squares = document.querySelectorAll(".square");
-squares.forEach(square => {
-  square.addEventListener("click", () => handlePlayerMove(square));
+    const squares = document.querySelectorAll(".square");
+    squares.forEach(square => {
+    square.addEventListener("click", () => handlePlayerMove(square));
+    });
+
+    // Add event listener to reset button
+const resetButton = document.querySelector("#reset-button");
+resetButton.addEventListener("click", () => {
+  // Reset game state
+  board = ["", "", "", "", "", "", "", "", ""];
+  currentPlayer = "X";
+  gameInProgress = true;
+  turnCount = 0;
+
+  // Reset board display
+  squares.forEach(square => {
+    square.textContent = "";
+  });
+  document.getElementById("result").textContent = "";
 });
+
+
 
