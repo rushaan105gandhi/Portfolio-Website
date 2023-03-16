@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  .board {
+    display: flex;
+    flex-wrap: wrap;
+    width: 300px;
+    margin: 0 auto;
+  }
+  
+  .square {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    font-size: 5em;
+    text-align: center;
+    line-height: 100px;
+    cursor: pointer;
+  }
+  
+  .square:hover {
+    background-color: #eee;
+  }
+  
+  .square:active {
+    background-color: #ddd;
+  }
+  
